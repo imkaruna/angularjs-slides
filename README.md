@@ -15,3 +15,7 @@ If you'd like to make a contribution and make this app even better,
 * Make changes on your fork
 * Push your changes with descriptive commits
 * Open a pull request for this repository
+
+### License
+
+[The MIT License](https://opensource.org/licenses/MIT)(MIT)Copyright (c) 2016
