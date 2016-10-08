@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="sliderApp">
+  <head>
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  </head>
+  <body ng-controller = "SliderController">
+
+    <div id="banner">
+      <h1>AngularJS Slides</h1>
+      <div class="banner-top">
+        <h1>Title {{currentTitle}}</h1>
+        <div class="navigation">
+          <a href="#"><i class="fa fa-caret-square-o-left" ng-click="prevSlide()"></i></a>
+          <a href="#"><i class="fa fa-caret-square-o-right" ng-click="nextSlide()" ></i></a>
+        </div>
+      </div>
+      <div class="banner-img">
+            <img ng-repeat="slide in slides" ng-src="{{slide.src}}" alt="{{slide.id}}" ng-hide="!isCurrentSlideIndex($index)"/>
+      </div>
+      <div class="banner-bottom">
+        <p>{{currentDescription}}</p>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
+    <script src="javascript/main.js">
+
+    </script>
+  </body>
+  </html>
