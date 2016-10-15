@@ -1,7 +1,9 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
 @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css';
 
+html,
 body {
+  /* full page height */
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
@@ -14,11 +16,21 @@ body {
   margin:0;
 }
 
+#banner .banner-top {
+  height:0;
+  position: absolute;
+  overflow: hidden;
+  background-color:rgba(0,0,0,0.5);
+  width:998px;
+  transition: height 1s;
+}
+
 .banner-top {
-  height:auto;
+  height:0;
   position:absolute;
   width:100%;
   background-color:rgba(0,0,0,0.5);
+  transition: height 0.5s;
 }
 
 .banner-top h1 {
@@ -42,10 +54,12 @@ div.navigation a > i {
 }
 
 #banner .banner-bottom {
+  height:0;
   position: absolute;
   bottom: -65px;
   background-color:rgba(0,0,0,0.5);
   width:998px;
+  transition: height 1s;
 }
 
 .banner-bottom > p {
@@ -54,4 +68,12 @@ div.navigation a > i {
   color:white;
   padding: 8px;
   letter-spacing:1px;
+}
+
+#banner:hover .banner-top{
+  height:70px;
+}
+
+#banner:hover .banner-bottom{
+  height:70px;
 }
